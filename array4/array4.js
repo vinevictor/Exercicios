@@ -28,7 +28,7 @@
 //     for (var indexNumero = 0; indexNumero < 5; indexNumero++) {
 //         if (numero == array[indexNumero]) {
 //             numero = parseInt(prompt("Digite outro numero esse ja existe."))
-//             indexNumero--
+//             indexNumero = -1
 //         }
 
 //     }
@@ -40,63 +40,77 @@
 
 // Exercicio 3
 
-var arrayA = []
-var arrayB = []
-var arrayC = []
-var indexArray = 0
+// var arrayA = []
+// var arrayB = []
+// var arrayC = []
+// var indexArray = 0
 
-var repeat = true
-while (repeat) {
-    arrayA[indexArray] = parseInt(prompt("Vetor A:"))
-    arrayB[indexArray] = parseInt(prompt("Vetor B:"))
-    var continuar = prompt("Deseja Adicionar mais Numeros? s/n")
+// var repeat = true
+// while (repeat) {
+//     arrayA[indexArray] = parseInt(prompt("Vetor A:"))
+//     arrayB[indexArray] = parseInt(prompt("Vetor B:"))
+//     var continuar = prompt("Deseja Adicionar mais Numeros? s/n")
 
-    if (continuar == "n" || continuar == "N") {
-        repeat = false
-    }
-    indexArray++
-}
+//     if (continuar == "n" || continuar == "N") {
+//         repeat = false
+//     }
+//     indexArray++
+// }
 
 
-arrayA.length
-var indexArray = 1
-for (i = 0; i < arrayA.length; i++) {
 
-    if (arrayA[i] % 2 != 0 && arrayB[i] % 2 != 0) {
-        arrayC[i] = arrayA[i]
-        arrayC[i + indexArray] = arrayB[i]
-    } else if (arrayA[i] == arrayB[i] || arrayA[i] % 2 != 0) {
-        arrayC[i] = arrayA[i]
+// var indexArray = 1
+// var indexC = 0
+// for (i = 0; i < arrayA.length; i++) {
+//     if (arrayA[i] % 2 != 0 && arrayB[i] % 2 != 0) {
+//         arrayC[i] = arrayA[i]
+//         arrayC[indexC + 1] = arrayB[i]
+//         indexC++
+//     } else {
+//         for (var index2 = 0; index2 < indexArray; index2++) {
 
-    } else if (arrayB[i] % 2 != 0) {
-        arrayC[i] = arrayB[i]
-    }
-}
-console.log(arrayA)
-console.log(arrayB)
-console.log(arrayC)
+//             if (arrayA[i] == arrayB[index2]) {
+//                 arrayC[indexC] = arrayA[i]
+//                 indexC++
+
+//             } else if (arrayA[i] % 2 != 0) {
+//                 arrayC[indexC] = arrayA[i]
+//                 indexC++
+
+//             } else if (arrayB[index2] % 2 != 0) {
+//                 arrayC[indexC] = arrayB[index2]
+//                 indexC++
+//             }
+
+//         }
+//     }
+// }
+
+// console.log(arrayA)
+// console.log(arrayB)
+// console.log(arrayC)
 
 // Exercicio 4
 
-// var arrayA = []
-// var arrayB = []
+var arrayA = []
+var arrayB = []
 
-// for (var i = 0; i < 10; i++) {
-//     arrayA[i] = parseInt(prompt("Digite o " + (i + 1) + " Numero"))
-// }
+for (var i = 0; i < 10; i++) {
+    arrayA[i] = parseInt(prompt("Digite o " + (i + 1) + " Numero"))
+}
 
-// var indexArrayB = 0
+var indexArrayB = 0
 
-// for (var i = 0; i < arrayA.length; i++) {
-//     if (arrayA[i] == 0) {
-//         arrayB[indexArrayB] = arrayA[i + 1]
-//         indexArrayB++
-//         i++
-//     } else {
-//         arrayB[indexArrayB] = arrayA[i]
-//         indexArrayB++
-//     }
+for (var i = 0; i < arrayA.length; i++) {
+    if (arrayA[i] == 0) {
+        arrayB[indexArrayB] = arrayA[i + 1]
+        indexArrayB++
+        i++
+    } else {
+        arrayB[indexArrayB] = arrayA[i]
+        indexArrayB++
+    }
 
-// }
-// console.log("Entrada = " + arrayA)
-// console.log("Saida = " + arrayB)
+}
+console.log("Entrada = " + arrayA)
+console.log("Saida = " + arrayB)
